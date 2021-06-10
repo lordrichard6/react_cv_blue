@@ -3,10 +3,12 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 import { TopSection } from './topSection'
+import { Navbar } from '../../components/navbar'
 
 export function Homepage() {
     return (
         <PageContainer>
+            <Navbar />
             <TopSection />
         </PageContainer>
     )

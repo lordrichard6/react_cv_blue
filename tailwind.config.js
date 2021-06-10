@@ -2,6 +2,12 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    // colors: {
+    //   'primary': '#0094B5',
+    // },
+    // textColor: {
+    //   'primary': '#0094B5',
+    // },
     extend: {},
     screens: {
       sm: "640px",
