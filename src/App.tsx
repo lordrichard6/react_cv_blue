@@ -3,10 +3,12 @@ import styled from 'styled-components';
 import tw from 'twin.macro'
 import './App.css';
 
+import { Homepage } from './containers/Homepage'
+
 function App() {
   return (
     <AppContainer>
-      <h1>Hello world!</h1>
+      <Homepage />
     </AppContainer>
   );
 }
