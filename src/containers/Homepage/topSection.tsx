@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 
 import blob from '../../assets/images/blob.svg'
 import logo from '../../assets/images/logo_me-min.png'
-import vector from '../../assets/images/vector_01.svg'
+// import vector from '../../assets/images/vector_01.svg'
 
 export function TopSection() {
     return (
