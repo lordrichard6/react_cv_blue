@@ -41,6 +41,9 @@ const AboutMeContainer = styled.div`
         w-screen
         pb-24
         relative
+        flex
+        justify-center
+        lg:justify-start
     `}
 `
 
@@ -78,14 +81,15 @@ const Title = styled.h1`
     z-index: 10;
     ${tw`
         text-white
-        text-6xl
+        text-4xl
+        md:text-6xl
     `}
 `
 
 const Text = styled.p`
     ${tw`
         text-white
-        text-lg
+        md:text-lg
         tracking-wider
         mt-10
     `}

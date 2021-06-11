@@ -27,12 +27,13 @@ export function TopSection() {
 }
 
 const TopSectionContainer = styled.div`
-    max-height: 400px;
     margin-top: 6em;
     ${tw`
         w-full
         max-w-screen-2xl
         flex
+        flex-col
+        lg:flex-row
         justify-between
         px-4
         lg:px-24
@@ -42,20 +43,24 @@ const TopSectionContainer = styled.div`
 const LeftContainer = styled.div`
     ${tw`
         h-full
-        w-1/2
+        md:h-full
+        lg:w-1/2
         flex
         flex-col
         justify-center
         flex-wrap
         content-center
         relative
+        mb-10
+        md:mb-36
     `}
 
 `
 
 const Title = styled.h1`
     ${tw`
-        text-4xl
+        text-3xl
+        lg:text-4xl
         font-semibold
         font-medium
         leading-relaxed
@@ -64,7 +69,8 @@ const Title = styled.h1`
 
 const Slogan = styled.h2`
     ${tw`
-        text-2xl
+        text-xl
+        md:text-2xl
         text-gray-500
         font-semibold
         font-medium
@@ -82,9 +88,11 @@ const Slogan = styled.h2`
 // `
 
 const RightContainer = styled.div`
+    max-height: 400px;
     ${tw`
-        h-full
-        w-1/2
+        h-auto
+        w-full
+        md:w-1/2
         relative
     `}
 `
@@ -93,27 +101,28 @@ const BlobContainer = styled.div`
     position: absolute;
     z-index: -1;
     ${tw`
-    
+        w-full
+        h-auto
     `}
 
     img {
-        width: 100%;
-        height: auto;
-        max-height: max-content;
     }
 `
 
 const LogoContainer = styled.div`
     ${tw`
-        h-full
-        w-auto
-        flex
-        justify-center
+        h-auto
+        w-full
+       flex
+       justify-center
     `}
 
     img {
-        width: auto;
-        height: 100%;
-        max-width: fit-content;
+        ${tw`
+            w-3/4
+            h-auto
+
+        `}
+        
     }
 `

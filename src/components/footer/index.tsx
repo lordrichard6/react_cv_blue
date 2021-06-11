@@ -132,20 +132,22 @@ const FooterContainer = styled.div`
 const InnerContainer = styled.div`
     ${tw`
         flex
+        flex-col
+        md:flex-row
         w-full
         h-full
         flex-wrap
-        
     `}
 `
 
 const SectionContainer = styled.div`
     ${tw`
-        w-1/3
+        md:w-1/3
         flex
         flex-col
         items-center
         justify-center
+        my-2
     `}
 `
 
@@ -153,6 +155,7 @@ const HeaderTitle = styled.h1`
     ${tw`
         text-2xl
         font-bold
+        mb-2
     `}
 `
 
@@ -198,6 +201,7 @@ const IconContainer = styled.div`
 
 const Icon = styled.a`
     ${tw`
+        h-10
         mx-2
     `}
 `

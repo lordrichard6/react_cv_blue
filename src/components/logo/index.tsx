@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import tw from 'twin.macro'
 
+import { SCREENS } from "../responsive"
 import logo from '../../assets/images/icon.png'
 
 
@@ -25,14 +26,15 @@ const LogoContainer = styled.div`
 
 const LogoText = styled.div`
     color: #0094B5;
-    letter-spacing: 0.2em;
     ${tw`
-        text-xl
+        text-2xl
         md:text-3xl
         font-semibold
         m-1
     `}
-
+    @media (min-width: ${SCREENS.md}){
+        letter-spacing: 0.2em;
+    }
 `;
 
 const Image = styled.div`
