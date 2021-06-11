@@ -19,7 +19,6 @@ export function Navbar() {
 const NavbarContainer = styled.div`
     min-height: 68px;
     ${tw`
-        bg-gray-200
         w-full
         max-w-screen-2xl
         flex
