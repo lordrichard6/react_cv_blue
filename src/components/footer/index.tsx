@@ -6,6 +6,7 @@ import { faReact, faLinkedin, faInstagram, faGithubSquare } from '@fortawesome/f
 import { faEnvelope, faPhoneAlt, faDungeon } from '@fortawesome/free-solid-svg-icons'
 
 import logo from '../../assets/images/icon.png'
+import { Variables } from '../../assets/variables'
 
 export function Footer() {
     return (
@@ -115,7 +116,7 @@ export function Footer() {
 }
 
 const FooterContainer = styled.div`
-    background-color: #1d2124;
+    background-color: ${Variables.secondary};
     ${tw`
         flex
         flex-col
@@ -189,7 +190,7 @@ const SmallText = styled.p`
 `
 
 const IconContainer = styled.div`
-    color: #0094B5;
+    color: ${Variables.primary};
     ${tw`
         flex
         justify-center
@@ -201,7 +202,6 @@ const IconContainer = styled.div`
 
 const Icon = styled.a`
     ${tw`
-        h-10
         mx-2
     `}
 `
@@ -262,7 +262,7 @@ const HorizontalContainer = styled.div`
 `
 
 const BlueIcon = styled.span`
-    background-color: #0094B5;
+    background-color: ${Variables.primary};
     ${tw`
         w-9
         h-9

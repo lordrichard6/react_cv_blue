@@ -4,6 +4,7 @@ import tw from 'twin.macro'
 
 import { SCREENS } from "../responsive"
 import logo from '../../assets/images/icon.png'
+import { Variables } from '../../assets/variables'
 
 
 export function Logo() {
@@ -25,7 +26,7 @@ const LogoContainer = styled.div`
 `;
 
 const LogoText = styled.div`
-    color: #0094B5;
+    color: ${Variables.primary};
     ${tw`
         text-2xl
         md:text-3xl

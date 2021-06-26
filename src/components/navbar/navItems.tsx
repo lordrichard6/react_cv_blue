@@ -5,6 +5,7 @@ import { slide as Menu } from 'react-burger-menu'
 import { useMediaQuery } from 'react-responsive'
 import { SCREENS } from '../responsive'
 import menuStyles from './menuStyles'
+import { Link } from 'react-router-dom'
 
 export function NavItems() {
     const isMobile = useMediaQuery({ maxWidth: SCREENS.sm })
@@ -14,19 +15,19 @@ export function NavItems() {
             <Menu right styles={menuStyles}>
                 <ListContainer>
                     <NavItem menu>
-                        <a href="/#">Home</a>
+                        <Link to="/">Home</Link>
                     </NavItem>
                     <NavItem menu>
-                        <a href="/#">myProjects</a>
+                        <Link to="/projects">myProjects</Link>
                     </NavItem>
                     <NavItem menu>
-                        <a href="/#">myEducation</a>
+                        <Link to="/education">myEducation</Link>
                     </NavItem>
                     <NavItem menu>
-                        <a href="/#">mySkills us</a>
+                        <Link to="/skills">mySkills us</Link>
                     </NavItem>
                     <NavItem menu>
-                        <a href="/#">extra</a>
+                        <Link to="/extra">extra</Link>
                     </NavItem>
                 </ListContainer>
             </Menu>
@@ -35,19 +36,19 @@ export function NavItems() {
     return (
         <ListContainer>
             <NavItem >
-                <a href="/#">Home</a>
+                <Link to="/">Home</Link>
             </NavItem>
             <NavItem >
-                <a href="/#">myProjects</a>
+                <Link to="/projects">myProjects</Link>
             </NavItem>
             <NavItem >
-                <a href="/#">myEducation</a>
+                <Link to="/education">myEducation</Link>
             </NavItem>
             <NavItem >
-                <a href="/#">mySkills</a>
+                <Link to="/skills">mySkills</Link>
             </NavItem>
             <NavItem >
-                <a href="/#">extra</a>
+                <Link to="/extra">extra</Link>
             </NavItem>
         </ListContainer>
     )
@@ -73,7 +74,7 @@ const NavItem = styled.li<{ menu?: any }>`
         transition
         duration-300
         ease-in-out
-        hover:text-gray-700
+        hover:text-blue-500
     `}
     ${({ menu }) =>
         menu &&
