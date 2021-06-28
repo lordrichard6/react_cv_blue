@@ -1,18 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
+import ReactTypingEffect from 'react-typing-effect'
 
+import { Variables } from '../../assets/variables'
 import blob from '../../assets/images/blob.svg'
 import logo from '../../assets/images/logo_me-min.png'
-// import vector from '../../assets/images/vector_01.svg'
 
 export function TopSection() {
     return (
         <TopSectionContainer>
             <LeftContainer>
-                <Title>Developer{<br />} Designer{<br />} UI and UX Expert</Title>
+                <TypingContainer>
+                    <ReactTypingEffect text='Developer' speed={120} eraseDelay={700} />
+                    <ReactTypingEffect text='Designer' speed={140} eraseDelay={700} />
+                    <ReactTypingEffect text='UI and UX Expert' speed={100} eraseDelay={700} />
+                </TypingContainer>
+                {/* <Title>Developer{<br />} Designer{<br />} UI and UX Expert</Title> */}
                 <Slogan>Solutions don't come easy</Slogan>
-                {/* <Vector src={vector} alt="vector" /> */}
             </LeftContainer>
             <RightContainer>
                 <BlobContainer>
@@ -57,13 +62,16 @@ const LeftContainer = styled.div`
 
 `
 
-const Title = styled.h1`
+const TypingContainer = styled.h1`
+    color: ${Variables.primary};
     ${tw`
-        text-3xl
-        lg:text-4xl
+        flex
+        flex-col
+        text-4xl
+        md:text-5xl
         font-semibold
-        font-medium
         leading-relaxed
+        w-full
     `}
 `
 
@@ -74,18 +82,9 @@ const Slogan = styled.h2`
         text-gray-500
         font-semibold
         font-medium
+        my-4
     `}
 `
-
-// const Vector = styled.img`
-//     z-index: -1;
-//     top: 11em;
-//     left: 5em;
-//     ${tw`
-//         absolute
-//         h-1/6
-//     `}
-// `
 
 const RightContainer = styled.div`
     max-height: 400px;
@@ -121,7 +120,6 @@ const LogoContainer = styled.div`
         ${tw`
             w-3/4
             h-auto
-
         `}
         
     }

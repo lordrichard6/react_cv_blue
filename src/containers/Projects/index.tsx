@@ -2,18 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 
-import { Navbar } from '../../components/navbar'
-import { Footer } from '../../components/footer'
 import { TopSection } from './topSection'
 import { ProjectCards } from '../../components/projectCards'
+import { LatestProject } from '../../components/latestProject'
 
 export function Projects() {
     return (
         <PageContainer>
-            <Navbar />
-            {/* <TopSection /> */}
+            <TopSection />
+            <LatestProject />
             <ProjectCards />
-            <Footer />
+            <ProjectCards />
+            <ProjectCards />
         </PageContainer>
     )
 }

@@ -5,6 +5,7 @@ import Carousel, { Dots, slidesToShowPlugin } from '@brainhubeu/react-carousel'
 import '@brainhubeu/react-carousel/lib/style.css'
 
 import { SingleCard } from './singleCard'
+import { SecondaryTitle } from '../../assets/styles'
 
 export function ProjectCards() {
     const [current, setCurrent] = useState(0)
@@ -22,13 +23,13 @@ export function ProjectCards() {
 
     return (
         <CardContainer>
-            <Title>
+            <SecondaryTitle>
                 React.js
-            </Title>
-            <Carousel 
-                value={current} 
-                onChange={setCurrent} 
-                slides={cards} 
+            </SecondaryTitle>
+            <Carousel
+                value={current}
+                onChange={setCurrent}
+                slides={cards}
                 plugins={['clickToChange', {
                     resolve: slidesToShowPlugin,
                     options: {
@@ -37,10 +38,10 @@ export function ProjectCards() {
                 }]}
             >
             </Carousel>
-            <Dots 
-                value={current} 
+            <Dots
+                value={current}
                 onChange={setCurrent}
-                number={numberOfDots} 
+                number={numberOfDots}
             />
         </CardContainer>
     )
@@ -56,12 +57,6 @@ const CardContainer = styled.div`
         justify-center
         px-4
         md:px-0
-        mb-10
-    `}
-`
-
-const Title = styled.h1`
-    ${tw`
-        
+        my-10
     `}
 `

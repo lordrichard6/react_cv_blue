@@ -7,6 +7,8 @@ import { SCREENS } from '../responsive'
 import menuStyles from './menuStyles'
 import { Link } from 'react-router-dom'
 
+import { Variables } from '../../assets/variables'
+
 export function NavItems() {
     const isMobile = useMediaQuery({ maxWidth: SCREENS.sm })
 
@@ -21,10 +23,10 @@ export function NavItems() {
                         <Link to="/projects">myProjects</Link>
                     </NavItem>
                     <NavItem menu>
-                        <Link to="/education">myEducation</Link>
+                        <Link to="/skills">mySkills</Link>
                     </NavItem>
                     <NavItem menu>
-                        <Link to="/skills">mySkills us</Link>
+                        <Link to="/blog">myblog</Link>
                     </NavItem>
                     <NavItem menu>
                         <Link to="/extra">extra</Link>
@@ -42,10 +44,10 @@ export function NavItems() {
                 <Link to="/projects">myProjects</Link>
             </NavItem>
             <NavItem >
-                <Link to="/education">myEducation</Link>
+                <Link to="/skills">mySkills</Link>
             </NavItem>
             <NavItem >
-                <Link to="/skills">mySkills</Link>
+                <Link to="/blog">myBlog</Link>
             </NavItem>
             <NavItem >
                 <Link to="/extra">extra</Link>
@@ -62,12 +64,12 @@ const ListContainer = styled.ul`
 `
 
 const NavItem = styled.li<{ menu?: any }>`
+    color: ${Variables.primary};
     ${tw`
         text-xs
         lg:text-xl
         md:text-base
-        text-black
-        font-medium
+        font-extralight
         mr-1
         md:mr-5
         cursor-pointer

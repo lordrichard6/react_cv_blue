@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import tw from 'twin.macro'
 
+import { Variables } from '../../assets/variables'
+
 export function Shape() {
     return (
         <ShapeContainer>
@@ -11,7 +13,7 @@ export function Shape() {
 
 const ShapeContainer = styled.div`
     min-height: 200px;
-    background-color: #0094B5; 
+    background-color: ${Variables.primary}; 
     ${tw`
         w-screen
         mt-36

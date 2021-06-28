@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 
+import { Variables } from '../../assets/variables'
+
 export function Page404() {
     return (
         <PageContainer>
@@ -17,7 +19,7 @@ const PageContainer = styled.div`
         flex-col
         flex-wrap
         w-full
-        h-full
+        h-screen
         items-center
         justify-center
         overflow-x-hidden
@@ -25,7 +27,7 @@ const PageContainer = styled.div`
 `
 
 const Title = styled.h1`
-        color: #0094B5;
+        color: ${Variables.primary};
     ${tw`
         text-6xl
         tracking-widest
@@ -33,7 +35,7 @@ const Title = styled.h1`
 `
 
 const Text = styled.h1`
-        color: #0094B5;
+        color: ${Variables.primary};
     ${tw`
         text-2xl
     `}

@@ -25,7 +25,6 @@ const NavbarContainer = styled.div`
         flex-row
         items-center
         px-4
-        lg:py-10
         lg:px-24
         justify-between
     `}
