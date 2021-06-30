@@ -32,45 +32,45 @@ export function TopSection() {
 }
 
 const TopSectionContainer = styled.div`
-    margin-top: 6em;
     ${tw`
         w-full
+        h-full
         max-w-screen-2xl
         flex
         flex-col
         lg:flex-row
+        flex-wrap
         justify-between
-        px-4
+        lg:mt-10
+        2xl:my-60
         lg:px-24
+        
     `}
 `
 
 const LeftContainer = styled.div`
     ${tw`
-        h-full
-        md:h-full
+        h-auto
         lg:w-1/2
         flex
         flex-col
         justify-center
         flex-wrap
         content-center
-        relative
-        mb-10
-        md:mb-36
     `}
 
 `
 
-const TypingContainer = styled.h1`
+const TypingContainer = styled.div`
     color: ${Variables.primary};
     ${tw`
         flex
         flex-col
         text-4xl
         md:text-5xl
+        2xl:text-7xl
         font-semibold
-        leading-relaxed
+        leading-loose
         w-full
     `}
 `
@@ -79,6 +79,7 @@ const Slogan = styled.h2`
     ${tw`
         text-xl
         md:text-2xl
+        2xl:text-3xl
         text-gray-500
         font-semibold
         font-medium
@@ -87,11 +88,10 @@ const Slogan = styled.h2`
 `
 
 const RightContainer = styled.div`
-    max-height: 400px;
     ${tw`
         h-auto
         w-full
-        md:w-1/2
+        lg:w-1/2
         relative
     `}
 `
@@ -100,26 +100,22 @@ const BlobContainer = styled.div`
     position: absolute;
     z-index: -1;
     ${tw`
-        w-full
-        h-auto
+        
     `}
-
-    img {
-    }
 `
 
 const LogoContainer = styled.div`
     ${tw`
         h-auto
         w-full
-       flex
-       justify-center
+        flex
+        justify-center
     `}
 
     img {
         ${tw`
             w-3/4
-            h-auto
+            h-full
         `}
         
     }

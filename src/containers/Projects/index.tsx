@@ -5,14 +5,19 @@ import tw from 'twin.macro'
 import { TopSection } from './topSection'
 import { ProjectCards } from '../../components/projectCards'
 import { LatestProject } from '../../components/latestProject'
+import { projectsInfo } from '../../assets/static'
 
 export function Projects() {
     return (
         <PageContainer>
             <TopSection />
-            <LatestProject />
-            <ProjectCards />
-            <ProjectCards />
+            <LatestProject
+                title={projectsInfo[8].title}
+                link={projectsInfo[8].link}
+                git={projectsInfo[8].git}
+                img={projectsInfo[8].img}
+                text={projectsInfo[8].text}
+            />
             <ProjectCards />
         </PageContainer>
     )

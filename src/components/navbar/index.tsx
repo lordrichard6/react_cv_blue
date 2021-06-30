@@ -19,13 +19,13 @@ export function Navbar() {
 const NavbarContainer = styled.div`
     min-height: 68px;
     ${tw`
-        w-full
-        max-w-screen-2xl
         flex
         flex-row
+        flex-wrap
         items-center
         px-4
         lg:px-24
+        2xl:px-80
         justify-between
     `}
 `;

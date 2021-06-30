@@ -43,6 +43,7 @@ const AboutMeContainer = styled.div`
         pb-24
         relative
         flex
+        flex-wrap
         justify-center
         lg:justify-start
     `}

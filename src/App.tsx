@@ -39,6 +39,9 @@ const AppContainer = styled.div`
     w-full
     flex
     flex-col
+    justify-center
+    flex-wrap
+    content-center
     overflow-x-hidden
   `}
 `

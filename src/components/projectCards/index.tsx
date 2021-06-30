@@ -6,30 +6,24 @@ import '@brainhubeu/react-carousel/lib/style.css'
 
 import { SingleCard } from './singleCard'
 import { SecondaryTitle } from '../../assets/styles'
+import { projectsInfo } from '../../assets/static'
 
 export function ProjectCards() {
     const [current, setCurrent] = useState(0)
 
-    const cards = [
-        <SingleCard />,
-        <SingleCard />,
-        <SingleCard />,
-        <SingleCard />,
-        <SingleCard />,
-        <SingleCard />,
-    ]
+    console.log(projectsInfo)
 
-    const numberOfDots = Math.ceil(cards.length / 3)
+    const numberOfDots = Math.ceil(projectsInfo.length / 3)
 
     return (
         <CardContainer>
             <SecondaryTitle>
-                React.js
+                Projects
             </SecondaryTitle>
             <Carousel
                 value={current}
                 onChange={setCurrent}
-                slides={cards}
+                slides={projectsInfo}
                 plugins={['clickToChange', {
                     resolve: slidesToShowPlugin,
                     options: {
@@ -37,6 +31,18 @@ export function ProjectCards() {
                     }
                 }]}
             >
+                {projectsInfo.map((n) => {
+                    return (
+                        <SingleCard
+                            key={n.id}
+                            img={n.img}
+                            title={n.title}
+                            tech={n.tech}
+                            link={n.link}
+                            git={n.git}
+                        />
+                    )
+                })}
             </Carousel>
             <Dots
                 value={current}
@@ -57,6 +63,6 @@ const CardContainer = styled.div`
         justify-center
         px-4
         md:px-0
-        my-10
+        my-28
     `}
 `

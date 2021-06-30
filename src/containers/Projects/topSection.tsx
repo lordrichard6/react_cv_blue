@@ -36,6 +36,7 @@ const TopSectionContainer = styled.div`
         px-4
         my-24
         lg:px-24
+        2xl:px-2
     `}
 `
 

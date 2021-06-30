@@ -8,6 +8,7 @@ export const Title = styled.h1`
     ${tw`
         text-4xl
         md:text-6xl
+        2xl:text-7xl
         font-semibold
         leading-relaxed
         mb-10
@@ -19,6 +20,7 @@ export const SecondaryTitle = styled.h1`
     ${tw`
         text-3xl
         md:text-4xl
+        2xl:text-5xl
         font-semibold
         leading-relaxed
     `}

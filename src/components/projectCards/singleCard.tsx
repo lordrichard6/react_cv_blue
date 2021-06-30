@@ -6,21 +6,31 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import thumb from '../../assets/images/thumb.jpg'
 import { Variables } from '../../assets/variables'
+import { Text } from '../../assets/styles'
 
-export function SingleCard() {
+type card = {
+    title: string
+    link: string
+    git: string
+    img: string
+    tech: string
+}
+
+export function SingleCard({title, link, git, img, tech}: card) {
     return (
         <CardContainer>
             <CardThumbnail>
-                <img src={thumb} alt="tumbnail" />
+                <img src={img} alt="tumbnail" />
             </CardThumbnail>
             <CardTitle>
-                myProject
+                {title}
             </CardTitle>
+            <TechText>{tech}</TechText>
             <Button>
-                <h1>open</h1>
+                <a href={link}><h1>open</h1></a>
             </Button>
             <Icon>
-                <FontAwesomeIcon icon={faGithub} />
+                <a href={git}><FontAwesomeIcon icon={faGithub} /></a>
             </Icon>
         </CardContainer>
     )
@@ -29,7 +39,7 @@ export function SingleCard() {
 const CardContainer = styled.div`
     width: 16.5em;
     min-height: 23em;
-    max-height: 26em;
+    max-height: 28em;
     box-shadow: 0 1.3px 17px -2px rgba(0, 0, 0, 0.4);
     ${tw`
         flex
@@ -60,10 +70,18 @@ const CardThumbnail = styled.div`
 const CardTitle = styled.h1`
     color: ${Variables.primary};
     ${tw`
-        text-3xl
+        text-2xl
         font-bold
         self-center
-        my-2
+        mt-2
+    `}
+`
+
+const TechText = styled(Text)`
+    ${tw`
+        text-gray-500
+        mb-2
+        self-center
     `}
 `
 

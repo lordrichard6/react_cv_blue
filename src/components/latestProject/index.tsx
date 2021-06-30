@@ -5,20 +5,27 @@ import tw from 'twin.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { Variables } from '../../assets/variables'
-import { Text } from '../../assets/styles'
-import Image from '../../assets/images/harrison-hargrave-D5Jp8ueUQGc-unsplash.jpg'
+import { Text, Title } from '../../assets/styles'
 
-export function LatestProject() {
+type project = {
+    title: string
+    link: string
+    git: string
+    img: string
+    text: string
+}
+
+export function LatestProject({title, link, git, img, text}: project) {
     return (
         <ComponentContainer>
             <Description>Latest</Description>
-            <img src={Image} alt="image" />
+            <a href={link}><img src={img} alt="image" /></a>
+            <a href={link}><ProjTitle>{title}</ProjTitle></a>
             <Description>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan, commodo, sagittis fringilla sagittis.
-                Risus elementum quisque aenean ut in congue eros, ultrices. Quis egestas imperdiet magna facilisi sed lectus leo arcu.
+                {text}
             </Description>
             <Icon>
-                <FontAwesomeIcon icon={faGithub} />
+                <a href={git}><FontAwesomeIcon icon={faGithub} /></a>
             </Icon>
         </ComponentContainer>
     )
@@ -30,15 +37,25 @@ const ComponentContainer = styled.div`
         flex
         flex-col
         w-4/5
+        2xl:w-2/4
         px-10
         py-2
+        my-10
     `}
 
     img {
         ${tw`
-            mb-4
+            w-full
         `}
     }
+`
+
+const ProjTitle = styled(Title)`
+    ${tw`
+        mt-2
+        self-end
+        text-4xl
+    `}
 `
 
 const Description = styled(Text)`
