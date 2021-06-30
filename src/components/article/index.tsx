@@ -2,14 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 
-import {Text, Title, TercearyTitle} from '../../assets/styles'
+import {Text } from '../../assets/styles'
 import Image from '../../assets/images/harrison-hargrave-D5Jp8ueUQGc-unsplash.jpg'
 import { Variables } from '../../assets/variables'
 
 export function MainArticle() {
     return (
         <ComponentContainer>
-            <img src={Image} alt="image" />
+            <img src={Image} alt="thumbnail" />
             <TextContainer>
                 <TextTitle>Article</TextTitle>
                 <TextDate>20 - JUN</TextDate>

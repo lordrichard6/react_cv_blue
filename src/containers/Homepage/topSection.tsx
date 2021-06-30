@@ -57,6 +57,10 @@ const LeftContainer = styled.div`
         justify-center
         flex-wrap
         content-center
+        p-12
+        lg:p-0
+        my-10
+        lg:m-0
     `}
 
 `
@@ -66,7 +70,7 @@ const TypingContainer = styled.div`
     ${tw`
         flex
         flex-col
-        text-4xl
+        text-3xl
         md:text-5xl
         2xl:text-7xl
         font-semibold

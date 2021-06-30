@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 
-import { Text, Title, TercearyTitle } from '../../assets/styles'
-import Image from '../../assets/images/harrison-hargrave-D5Jp8ueUQGc-unsplash.jpg'
+import { Text } from '../../assets/styles'
+import thumbnail from '../../assets/images/harrison-hargrave-D5Jp8ueUQGc-unsplash.jpg'
 import { Variables } from '../../assets/variables'
 
 export function ArticleSnippet() {
@@ -21,7 +21,7 @@ export function ArticleSnippet() {
                     CMS and IT Infrastructure.
                 </TextDescription>
             </TextContainer>
-            <img src={Image} alt="image" />
+            <img src={thumbnail} alt="thumbnail" />
         </ComponentContainer>
     )
 }

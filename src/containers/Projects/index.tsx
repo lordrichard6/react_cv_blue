@@ -6,10 +6,12 @@ import { TopSection } from './topSection'
 import { ProjectCards } from '../../components/projectCards'
 import { LatestProject } from '../../components/latestProject'
 import { projectsInfo } from '../../assets/static'
+// import {BgShape} from '../../components/bgShape'
 
 export function Projects() {
     return (
         <PageContainer>
+            {/* <BgShape /> */}
             <TopSection />
             <LatestProject
                 title={projectsInfo[8].title}

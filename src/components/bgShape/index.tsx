@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import tw from 'twin.macro'
 
-import { Variables } from '../../assets/variables'
+// import { Variables } from '../../assets/variables'
 
-export function Shape() {
+export function BgShape() {
     return (
         <ShapeContainer>
             <ShapeElement></ShapeElement>
@@ -12,12 +12,12 @@ export function Shape() {
 }
 
 const ShapeContainer = styled.div`
-    min-height: 200px;
-    background-color: ${Variables.primary}; 
+    z-index: -10;
+    min-height: 100vh;
+    background: linear-gradient(to right, #00f260, #0575e6); 
     ${tw`
         w-screen
-        mt-36
-        2xl:mt-60
+        absolute
     `}
 `
 
@@ -25,5 +25,5 @@ const ShapeElement = styled.div`
     background-color: white; 
     min-height: 200px;
     min-width: 100vw;
-    clip-path: polygon(0% 0, 100% 0, 100% 100%, 100% 100%);
+    clip-path: polygon(100% 50%, 50% 100%, 100% 0%, 50% 10%);
 `

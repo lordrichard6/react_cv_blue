@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 
-import { Variables } from '../../assets/variables'
+// import { Variables } from '../../assets/variables'
 import { Title, Text, TercearyTitle } from '../../assets/styles'
 import { ProgressBar } from '../../components/progressBar'
 
@@ -13,11 +13,15 @@ export function TopSection() {
                 <InnerSection>
                     <Title>Skills &<br />Experience</Title>
                     <Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan, commodo, sagittis fringilla sagittis.
-                        Risus elementum quisque aenean ut in congue eros, ultrices. Quis egestas imperdiet magna facilisi sed lectus leo arcu.
-                        Rhoncus malesuada sociis diam tortor id urna. Faucibus enim laoreet non rhoncus. Nec proin faucibus tellus diam augue.
-                        Nec tellus non ut egestas at natoque mauris elit pulvinar. Id in mattis tellus erat venenatis, in faucibus aliquet.
-                        Adipiscing pellentesque consectetur ultrices malesuada ridiculus faucibus nunc at lacus.
+                        Based on my personal choice and time spent learning, I have stronger skills on the front-end,
+                        the visual aspect is of big importance and on that I feel like a "Monet" looking to create my
+                        "Lady with the Umbrella". <br/>
+                        I have learned HTML and CSS, then went on to Javascript, then Sass. I decided to go to React as
+                        my framework(library) of choice, not because of it's popularity, but because of it's component
+                        based structure and workflow. <br/>
+                        But anyway, i don't mean to leave you on a cliffhanger but if you
+                        want to hear more about my learning path and work experience, feel free to contact me.
+
                     </Text>
                 </InnerSection>
             </LeftSection>
@@ -27,9 +31,9 @@ export function TopSection() {
                         <TercearyTitle>Front-End</TercearyTitle>
                         <ProgressBar completed={80} />
                         <TercearyTitle>Back-End</TercearyTitle>
-                        <ProgressBar completed={80} />
+                        <ProgressBar completed={50} />
                         <TercearyTitle>UX & UI</TercearyTitle>
-                        <ProgressBar completed={80} />
+                        <ProgressBar completed={70} />
                         <TercearyTitle>React.js</TercearyTitle>
                         <ProgressBar completed={80} />
                     </SkillsContainer>

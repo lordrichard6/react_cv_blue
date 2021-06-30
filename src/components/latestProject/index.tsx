@@ -19,7 +19,7 @@ export function LatestProject({title, link, git, img, text}: project) {
     return (
         <ComponentContainer>
             <Description>Latest</Description>
-            <a href={link}><img src={img} alt="image" /></a>
+            <a href={link}><img src={img} alt="thumbnail" /></a>
             <a href={link}><ProjTitle>{title}</ProjTitle></a>
             <Description>
                 {text}
@@ -36,7 +36,8 @@ const ComponentContainer = styled.div`
     ${tw`
         flex
         flex-col
-        w-4/5
+        w-11/12
+        lg:w-4/5
         2xl:w-2/4
         px-10
         py-2
@@ -53,8 +54,10 @@ const ComponentContainer = styled.div`
 const ProjTitle = styled(Title)`
     ${tw`
         mt-2
-        self-end
-        text-4xl
+        self-center
+        lg:self-end
+        text-3xl
+        lg:text-4xl
     `}
 `
 

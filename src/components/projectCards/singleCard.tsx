@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-import thumb from '../../assets/images/thumb.jpg'
+// import thumb from '../../assets/images/thumb.jpg'
 import { Variables } from '../../assets/variables'
 import { Text } from '../../assets/styles'
 

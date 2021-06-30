@@ -7,7 +7,7 @@ const menuStyles = {
       top: "20px",
     },
     bmBurgerBars: {
-      background: "#0094B5",
+      background: "#ffffff",
     },
     bmBurgerBarsHover: {
       background: "#a90000",

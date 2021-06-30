@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 import { SCREENS } from "../responsive"
-import logo from '../../assets/images/icon.png'
+import logo from '../../assets/images/icon_white.png'
 import { Variables } from '../../assets/variables'
 
 

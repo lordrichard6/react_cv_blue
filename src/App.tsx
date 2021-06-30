@@ -9,8 +9,9 @@ import { Footer } from './components/footer'
 import { Homepage } from './containers/Homepage'
 import { Projects } from './containers/Projects'
 import { Skills } from './containers/Skills'
-import { Blog } from './containers/Blog'
+// import { Blog } from './containers/Blog'
 import { Page404 } from './containers/404'
+import { ComingSoon } from './containers/comingSoon'
 
 function App() {
   const location = useLocation()
@@ -23,7 +24,8 @@ function App() {
           <Route exact path='/' component={Homepage} />
           <Route exact path='/projects' component={Projects} />
           <Route exact path='/skills' component={Skills} />
-          <Route exact path='/blog' component={Blog} />
+          <Route exact path='/blog' component={ComingSoon} />
+          <Route exact path='/extra' component={ComingSoon} />
           <Route exact path='*' component={Page404} />
         </Switch>
       </AnimatePresence>

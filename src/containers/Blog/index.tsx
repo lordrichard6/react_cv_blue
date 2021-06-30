@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 
 import { MainArticle } from '../../components/article'
 import { ArticleSnippet } from '../../components/article/small'
-import { Title, Text, TercearyTitle } from '../../assets/styles'
+import { Title } from '../../assets/styles'
 
 export function Blog() {
     return (

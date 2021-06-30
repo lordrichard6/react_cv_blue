@@ -1,8 +1,3 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import tw from 'twin.macro'
-
 import { Variables } from '../../assets/variables'
 
 type values = {
