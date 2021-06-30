@@ -14,11 +14,11 @@ export function Projects() {
             {/* <BgShape /> */}
             <TopSection />
             <LatestProject
-                title={projectsInfo[8].title}
-                link={projectsInfo[8].link}
-                git={projectsInfo[8].git}
-                img={projectsInfo[8].img}
-                text={projectsInfo[8].text}
+                title={projectsInfo[9].title}
+                link={projectsInfo[9].link}
+                git={projectsInfo[9].git}
+                img={projectsInfo[9].img}
+                text={projectsInfo[9].text}
             />
             <ProjectCards />
         </PageContainer>

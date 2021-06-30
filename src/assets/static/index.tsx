@@ -213,15 +213,15 @@ export const projectsInfo = [
         text: "My first play with Three.js",
         git: "https://github.com/lordrichard6/threejs_sphere",
     },
-    // {
-    //     img: 'https://i.ibb.co/bQtd4Jg/p10-min.jpg',
-    //     id: 12,
-    //     title: "FastRent",
-    // tech: 'React.js',
-    //     link: "https://lordrichard-rentfast.netlify.app/",
-    //     text: "A beautifull car rental website made with React using typescript",
-    //     git: "https://github.com/lordrichard6/rent-fast",
-    // }
+    {
+        img: 'https://i.ibb.co/bQtd4Jg/p10-min.jpg',
+        id: 12,
+        title: "FastRent",
+        tech: 'React.js',
+        link: "https://lordrichard-rentfast.netlify.app/",
+        text: "A beautifull car rental website made with React using typescript.",
+        git: "https://github.com/lordrichard6/rent-fast",
+    }
 ]
 
 // EDUCATION ---------------------------------------------------------------
