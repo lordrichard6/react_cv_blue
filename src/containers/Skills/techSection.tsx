@@ -45,7 +45,8 @@ const TechTitle = styled(Title)`
 const IconsContainer = styled.div`
     ${tw`
         grid
-        grid-cols-6
+        grid-cols-3
+        lg:grid-cols-6
         2xl:grid-cols-8
         gap-10
         2xl:gap-16
@@ -55,7 +56,8 @@ const IconsContainer = styled.div`
     img {
         ${tw`
             w-auto
-            h-20  
+            h-16
+            lg:h-20  
             mb-2     
         `}
     }

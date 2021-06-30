@@ -28,7 +28,8 @@ const PageContainer = styled.div`
     `}
     img {
         ${tw`
-            w-1/4
+            w-9/12
+            lg:w-1/4
             h-auto
         `}
     }
@@ -37,7 +38,8 @@ const PageContainer = styled.div`
 const Title = styled.h1`
         color: ${Variables.primary};
     ${tw`
-        text-6xl
+        text-4xl
+        lg:text-6xl
         tracking-widest
     `}
 `

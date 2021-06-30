@@ -57,10 +57,12 @@ export function TopSection() {
 const SectionContainer = styled.div`
     ${tw`
         flex
-        flex-row
+        flex-col
+        lg:flex-row
         self-center
         overflow-x-hidden
-        my-20
+        my-12
+        lg:my-20
         lg:mx-20
         lg:px-20     
     `}
@@ -70,8 +72,7 @@ const LeftSection = styled.div`
     ${tw`
         flex
         flex-col
-        w-1/2
-
+        lg:w-1/2
     `}
 `
 
@@ -80,7 +81,7 @@ const RightSection = styled.div`
         flex
         flex-col
         flex-wrap
-        w-1/2
+        lg:w-1/2
         content-center
     `}
 `
@@ -91,14 +92,18 @@ const InnerSection = styled.div`
         flex-col
         2xl:w-4/5
         px-8
-        self-end
+        lg:px-8
+        self-center
+        lg:self-end
     `}
 `
 
 const SkillsContainer = styled.div`
     ${tw`
+        w-full
         flex
         flex-col
+        self-center
     `}
 `
 
@@ -106,10 +111,12 @@ const ExperienceContainer = styled.div`
     ${tw`
         flex
         flex-col
-        w-4/5
+        lg:w-4/5
         bg-gray-300
         mt-12
         px-4
+        self-center
+        lg:self-start
     `}
 `
 
