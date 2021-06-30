@@ -14,7 +14,7 @@ export function TechSection() {
                     return (
                         <Icon>
                             <img src={n.icon} alt={n.desc} />
-                            <Text>{n.name}</Text>
+                            <TechName>{n.name}</TechName>
                         </Icon>
                     )
                 })}
@@ -25,11 +25,14 @@ export function TechSection() {
 
 const PageContainer = styled.div`
     ${tw`
+        w-4/5
         flex
         justify-center
         flex-col
         flex-wrap
         content-center
+        my-10
+        2xl:my-20
     `}
 `
 
@@ -47,17 +50,26 @@ const IconsContainer = styled.div`
         gap-10
         2xl:gap-16
         mb-8
+        place-items-center
     `}
     img {
         ${tw`
             w-auto
-            h-20         
+            h-20  
+            mb-2     
         `}
     }
 `
 
 const Icon = styled.div`
     ${tw`
-        
+        grid
+        place-items-center
+    `}
+`
+
+const TechName = styled(Text)`
+    ${tw`
+        text-center
     `}
 `

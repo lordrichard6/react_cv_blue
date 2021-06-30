@@ -1,4 +1,21 @@
 import ReactIcon from '../images/icons/react.png'
+import TypescriptIcon from '../images/icons/typescript-min.png'
+import HTMLIcon from '../images/icons/html-min.png'
+import NextIcon from '../images/icons/next-min.png'
+import CSSIcon from '../images/icons/css-min.png'
+import JSIcon from '../images/icons/javascript-min.png'
+import NodeIcon from '../images/icons/node-min.png'
+import PhotoshopIcon from '../images/icons/photoshop-min.png'
+import FigmaIcon from '../images/icons/figma.png'
+import TailwindIcon from '../images/icons/tailwindcss.png'
+import StyledIcon from '../images/icons/styled-components.png'
+import npmIcon from '../images/icons/npm.png'
+import yarnIcon from '../images/icons/yarn.png'
+import gitIcon from '../images/icons/git.png'
+import pythonIcon from '../images/icons/python.png'
+import djangoIcon from '../images/icons/django.png'
+import sassIcon from '../images/icons/sass.png'
+import graphqlIcon from '../images/icons/graphql.png'
 
 // Techs ---------------------------------------------------------------
 export const techs = [
@@ -8,48 +25,89 @@ export const techs = [
         desc: 'react'
     },
     {
-        icon: `${ReactIcon}`,
-        name: 'React.js',
-        desc: 'react'
+        icon: `${NextIcon}`,
+        name: 'Next.js',
+        desc: 'Next'
     },
     {
-        icon: `${ReactIcon}`,
-        name: 'React.js',
-        desc: 'react'
+        icon: `${TypescriptIcon}`,
+        name: 'Typescript',
+        desc: 'typescript'
     },
     {
-        icon: `${ReactIcon}`,
-        name: 'React.js'
+        icon: `${HTMLIcon}`,
+        name: 'HTML',
+        desc: 'HTML'
     },
     {
-        icon: `${ReactIcon}`,
-        name: 'React.js',
-        desc: 'react'
+        icon: `${CSSIcon}`,
+        name: 'CSS',
+        desc: 'CSS'
     },
     {
-        icon: `${ReactIcon}`,
-        name: 'React.js',
-        desc: 'react'
+        icon: `${JSIcon}`,
+        name: 'Javascript',
+        desc: 'Javascript'
     },
     {
-        icon: `${ReactIcon}`,
-        name: 'React.js',
-        desc: 'react'
+        icon: `${NodeIcon}`,
+        name: 'Node.js',
+        desc: 'Node.js'
     },
     {
-        icon: `${ReactIcon}`,
-        name: 'React.js',
-        desc: 'react'
+        icon: `${PhotoshopIcon}`,
+        name: 'Photoshop',
+        desc: 'Photoshop'
     },
     {
-        icon: `${ReactIcon}`,
-        name: 'React.js',
-        desc: 'react'
+        icon: `${FigmaIcon}`,
+        name: 'Figma',
+        desc: 'Figma'
     },
     {
-        icon: `${ReactIcon}`,
-        name: 'React.js',
-        desc: 'react'
+        icon: `${TailwindIcon}`,
+        name: 'Tailwind',
+        desc: 'Tailwind'
+    },
+    {
+        icon: `${StyledIcon}`,
+        name: 'Styled-components',
+        desc: 'Styled-components'
+    },
+    {
+        icon: `${npmIcon}`,
+        name: 'npm',
+        desc: 'npm'
+    },
+    {
+        icon: `${yarnIcon}`,
+        name: 'yarn',
+        desc: 'yarn'
+    },
+    {
+        icon: `${gitIcon}`,
+        name: 'git',
+        desc: 'git'
+    },
+    {
+        icon: `${pythonIcon}`,
+        name: 'python',
+        desc: 'python'
+    },
+    {
+        icon: `${djangoIcon}`,
+        name: 'django',
+        desc: 'django'
+    },
+    {
+        icon: `${sassIcon}`,
+        name: 'sass',
+        desc: 'sass'
+    },
+    {
+        icon: `${graphqlIcon}`,
+        name: 'graphql',
+        desc: 'graphql'
     },
 ]
 

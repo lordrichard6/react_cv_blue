@@ -64,8 +64,9 @@ const ListContainer = styled.ul`
 `
 
 const NavItem = styled.li<{ menu?: any }>`
-    color: ${Variables.primary};
+    /* color: ${Variables.primary}; */
     ${tw`
+        text-white
         text-xs
         lg:text-xl
         md:text-base
@@ -76,7 +77,7 @@ const NavItem = styled.li<{ menu?: any }>`
         transition
         duration-300
         ease-in-out
-        hover:text-blue-500
+        hover:text-gray-200
     `}
     ${({ menu }) =>
         menu &&

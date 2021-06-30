@@ -4,6 +4,7 @@ import tw from 'twin.macro'
 
 import { NavItems } from './navItems'
 import { Logo } from '../logo'
+import {Variables } from '../../assets/variables'
 
 export function Navbar() {
     return (
@@ -17,6 +18,7 @@ export function Navbar() {
 }
 
 const NavbarContainer = styled.div`
+    background-color: ${Variables.primary};
     min-height: 68px;
     ${tw`
         flex

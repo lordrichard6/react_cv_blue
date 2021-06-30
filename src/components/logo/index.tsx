@@ -26,8 +26,9 @@ const LogoContainer = styled.div`
 `;
 
 const LogoText = styled.div`
-    color: ${Variables.primary};
+    /* color: ${Variables.primary}; */
     ${tw`
+        text-white
         text-2xl
         md:text-3xl
         font-semibold
