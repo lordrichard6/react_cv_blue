@@ -24,10 +24,10 @@ export function Footer() {
                     <IconContainer>
                         <FontAwesomeIcon icon={faReact} />
                     </IconContainer>
+                    <Button><a href="https://drive.google.com/file/d/14Ou5up4Gowv7XMNx6ct1oUE7-1m5DK2s/view?usp=sharing">Download my CV</a></Button>
                 </SectionContainer>
                 <SectionContainer>
                     <HeaderTitle>contactMe</HeaderTitle>
-
                     <FormContainer>
                         <form id="contact-form">
                             <input
@@ -186,6 +186,19 @@ const LogoContainer = styled.div`
 const SmallText = styled.p`
     ${tw`
         
+    `}
+`
+
+const Button = styled.button`
+    background-color: ${Variables.primary};
+    ${tw`
+        rounded-md
+        self-center
+        text-white
+        text-base
+        mt-1
+        py-1
+        px-2
     `}
 `
 
