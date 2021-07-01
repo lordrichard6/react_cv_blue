@@ -1,17 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
+import { motion } from 'framer-motion'
 
 import { Variables } from '../../assets/variables'
 import logo from '../../assets/images/icon.png'
+import { pageTransition } from '../../assets/animations'
 
 export function ComingSoon() {
     return (
-        <PageContainer>
-            <img src={logo} alt="logo" />
-            <Title>Coming Soon</Title>
-            <Title>Be Patient!!</Title>
-        </PageContainer>
+        <motion.div
+            initial="out"
+            animate="in"
+            exit="out"
+            variants={pageTransition}
+        >
+            <PageContainer>
+                <img src={logo} alt="logo" />
+                <Title>Coming Soon</Title>
+                <Title>Be Patient!!</Title>
+            </PageContainer>
+        </motion.div>
     )
 }
 
