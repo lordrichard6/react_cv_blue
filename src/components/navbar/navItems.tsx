@@ -10,11 +10,14 @@ import { Link } from 'react-router-dom'
 import { Variables } from '../../assets/variables'
 
 export function NavItems() {
+
     const isMobile = useMediaQuery({ maxWidth: SCREENS.sm })
 
     if (isMobile)
         return (
-            <Menu right styles={menuStyles} noOverlay>
+            <Menu right
+                styles={menuStyles}
+            >
                 <ListContainer>
                     <NavItem menu>
                         <Link to="/">Home</Link>

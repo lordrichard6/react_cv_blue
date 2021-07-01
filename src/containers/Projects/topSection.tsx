@@ -50,6 +50,8 @@ const LeftContainer = styled.div`
         self-center
         w-11/12
         lg:w-1/2
+        my-10
+        lg:m-0
         lg:pr-10
     `}
 `

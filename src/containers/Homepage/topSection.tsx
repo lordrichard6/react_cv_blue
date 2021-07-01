@@ -59,7 +59,7 @@ const LeftContainer = styled.div`
         content-center
         p-12
         lg:p-0
-        my-10
+        my-32
         lg:m-0
     `}
 
