@@ -14,7 +14,7 @@ export function NavItems() {
 
     if (isMobile)
         return (
-            <Menu right styles={menuStyles}>
+            <Menu right styles={menuStyles} noOverlay>
                 <ListContainer>
                     <NavItem menu>
                         <Link to="/">Home</Link>

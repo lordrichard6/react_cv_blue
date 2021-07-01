@@ -15,8 +15,8 @@ export function AboutMe() {
                     small town in the middle of Portugal but
                     I'm currently living in Swiss land more precisely in Zurich.{<br />}{<br />}
                     I took Administration with focus in accounting but thing is,
-                    it's a boring job and as surpising as it may sound,
-                    I love coding and the challenges that come with it
+                    in which i learned quite a lot and adopted an organized methodology.
+                    Anyway, I love coding and the challenges that come with it
                     specially when you find a solution for an hard problem.
                     Course is never to late to change careers and create great
                     things on the process provided that you have what it takes.{<br />}{<br />}

@@ -245,14 +245,14 @@ export const courses =
     },
     {
       title: "CS50 - Introdution to Computer Science",
-      from: "Dez 19",
+      from: "Dec 19",
       to: "Mar 20",
       where: "EDX",
       text: "Excelente course which goes deep in the basic concepts of computer science such as algorithms and data structures, also C, Python and SQL."
     },
     {
       title: "Modern React with redux",
-      from: "Dez 20",
+      from: "Dec 20",
       to: "Mar 21",
       where: "Udemy",
       text: "52 hours of intense pain with advanced concepts of REACT.js with redux."
