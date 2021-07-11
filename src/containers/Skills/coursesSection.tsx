@@ -1,20 +1,36 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 
 import { Title, Text, TercearyTitle } from '../../assets/styles'
-import { courses } from '../../assets/static'
+// import { courses } from '../../assets/static'
+import sanityClient from '../../client'
 
 export function CoursesSection() {
+    const [courseData, setCourseData] = useState<any[]>([]);
+
+    useEffect(() => {
+        sanityClient.fetch(`*[_type == "course"]{
+            title,
+            start,
+            finish,
+            place,
+            text,
+        }`
+        )
+            .then(data => setCourseData(data))
+            .catch(console.error);
+    }, [])
+
     return (
         <PageContainer>
             <SectionTitle>Courses</SectionTitle>
-            {courses.map((n) => {
+            {courseData && courseData.map((n: any, index: number) => {
                 return (
                     <InnerContainer>
                         <TercearyTitle>{n.title}</TercearyTitle>
-                        <TextCourse>{n.where}</TextCourse>
-                        <TextBase>{n.from} - {n.to}</TextBase>
+                        <TextCourse>{n.place}</TextCourse>
+                        <TextBase>{n.start} - {n.finish}</TextBase>
                         <TextBase>
                             {n.text}
                         </TextBase>

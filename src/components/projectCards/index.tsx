@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
-import Carousel, { Dots, slidesToShowPlugin } from '@brainhubeu/react-carousel'
-import '@brainhubeu/react-carousel/lib/style.css'
-import { useMediaQuery } from 'react-responsive'
-import { SCREENS } from '../../components/responsive'
+// import Carousel, { Dots, slidesToShowPlugin } from '@brainhubeu/react-carousel'
+// import '@brainhubeu/react-carousel/lib/style.css'
+// import { useMediaQuery } from 'react-responsive'
+// import { SCREENS } from '../../components/responsive'
 import sanityClient from '../../client'
 
 import { SingleCard } from './singleCard'
 import { SecondaryTitle } from '../../assets/styles'
 
 export function ProjectCards() {
-    const [current, setCurrent] = useState(0)
+    // const [current, setCurrent] = useState(0)
     const [projectData, setProjectData] = useState<any[]>([]);
 
     useEffect(() => {
@@ -32,18 +32,18 @@ export function ProjectCards() {
             .catch(console.error);
     }, [])
 
-    const isMobile = useMediaQuery({ maxWidth: SCREENS.sm })
+    // const isMobile = useMediaQuery({ maxWidth: SCREENS.sm })
 
-    console.log(projectData)
+    // console.log(projectData)
 
-    const numberOfDots = isMobile ? projectData.length : Math.ceil(projectData.length / 3)
+    // const numberOfDots = isMobile ? projectData.length : Math.ceil(projectData.length / 3)
 
     return (
         <CardContainer>
             <SecondaryTitle>
                 Projects
             </SecondaryTitle>
-            <Carousel
+            {/* <Carousel
                 value={current}
                 onChange={setCurrent}
                 slides={projectData}
@@ -75,7 +75,8 @@ export function ProjectCards() {
                         ]
                     }
                 }}
-            >
+            > */}
+            <InnerContainer>
                 {projectData && projectData.map((project: any, index: number) => (
                     <SingleCard
                         key={project.index}
@@ -87,12 +88,13 @@ export function ProjectCards() {
                     />
                 )
                 )}
-            </Carousel>
+            </InnerContainer>
+            {/* </Carousel>
             <Dots
                 value={current}
                 onChange={setCurrent}
                 number={numberOfDots}
-            />
+            /> */}
         </CardContainer>
     )
 }
@@ -108,5 +110,15 @@ const CardContainer = styled.div`
         px-4
         md:px-0
         my-28
+    `}
+`
+
+const InnerContainer = styled.div`
+    ${tw`
+        grid
+        grid-flow-row
+        grid-cols-1
+        lg:grid-cols-3
+        gap-4
     `}
 `

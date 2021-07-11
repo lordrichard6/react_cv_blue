@@ -15,18 +15,23 @@ import { Text, Title } from '../../assets/styles'
 //     text: string
 // }
 
-export function LatestProject({title, link, git, img, text}: any) {
+export function LatestProject({ title, link, git, img, text }: any) {
     return (
         <ComponentContainer>
-            <Description>Latest</Description>
-            <a href={link}><img src={img} alt="thumbnail" /></a>
-            <a href={link}><ProjTitle>{title}</ProjTitle></a>
-            <Description>
-                {text}
-            </Description>
-            <Icon>
-                <a href={git}><FontAwesomeIcon icon={faGithub} /></a>
-            </Icon>
+            <div>
+                <Description>Latest</Description>
+                <a href={link}><img src={img} alt="thumbnail" /></a>
+            </div>
+            <TextContainer>
+                <a href={link}><ProjTitle>{title}</ProjTitle></a>
+                <Description>
+                    {text}
+                </Description>
+                <Icon>
+                    <a href={git}><FontAwesomeIcon icon={faGithub} /></a>
+                </Icon>
+            </TextContainer>
+
         </ComponentContainer>
     )
 }
@@ -40,22 +45,20 @@ const ComponentContainer = styled.div`
               0 12px 12px rgba(0,0,0,0.12);
     ${tw`
         flex
-        flex-col
+        flex-row
         w-11/12
         lg:w-4/5
         2xl:w-2/4
-        px-6
-        py-2
+        p-10
         my-10
         bg-gray-300
-        rounded-sm
+        rounded-md
         relative
     `}
 
     img {
         ${tw`
-            w-full
-            rounded-sm
+            rounded-md
         `}
     }
 `
@@ -67,6 +70,16 @@ const ProjTitle = styled(Title)`
         lg:self-end
         text-3xl
         lg:text-4xl
+    `}
+`
+
+const TextContainer = styled.div`
+    ${tw`
+        flex
+        flex-col
+        flex-wrap
+        justify-center
+        p-10
     `}
 `
 
