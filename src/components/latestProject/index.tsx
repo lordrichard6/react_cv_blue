@@ -32,7 +32,12 @@ export function LatestProject({title, link, git, img, text}: project) {
 }
 
 const ComponentContainer = styled.div`
-    background: ${Variables.secondary};
+    /* background: ${Variables.secondary}; */
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 12px 12px rgba(0,0,0,0.12);
     ${tw`
         flex
         flex-col
@@ -42,6 +47,8 @@ const ComponentContainer = styled.div`
         px-10
         py-2
         my-10
+        bg-gray-300
+        rounded-sm
     `}
 
     img {
@@ -63,13 +70,11 @@ const ProjTitle = styled(Title)`
 
 const Description = styled(Text)`
     ${tw`
-        text-white
     `}
 `
 
 const Icon = styled.div`
     ${tw`
-        text-white
         self-end
         text-3xl
     `}
