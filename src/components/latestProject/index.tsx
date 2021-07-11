@@ -45,11 +45,13 @@ const ComponentContainer = styled.div`
               0 12px 12px rgba(0,0,0,0.12);
     ${tw`
         flex
-        flex-row
+        flex-col
+        lg:flex-row
         w-11/12
         lg:w-4/5
         2xl:w-2/4
-        p-10
+        p-6
+        lg:p-10
         my-10
         bg-gray-300
         rounded-md
@@ -79,7 +81,8 @@ const TextContainer = styled.div`
         flex-col
         flex-wrap
         justify-center
-        p-10
+        p-4
+        lg:p-10
     `}
 `
 
