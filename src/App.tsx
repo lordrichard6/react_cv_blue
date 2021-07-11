@@ -24,6 +24,7 @@ function App() {
           <Route exact path='/' component={Homepage} />
           <Route exact path='/projects' component={Projects} />
           <Route exact path='/skills' component={Skills} />
+          <Route exact path='/blog:slug' component={ComingSoon} />
           <Route exact path='/blog' component={ComingSoon} />
           <Route exact path='/extra' component={ComingSoon} />
           <Route exact path='*' component={Page404} />

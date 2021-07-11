@@ -1,23 +1,42 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 import Carousel, { Dots, slidesToShowPlugin } from '@brainhubeu/react-carousel'
 import '@brainhubeu/react-carousel/lib/style.css'
 import { useMediaQuery } from 'react-responsive'
 import { SCREENS } from '../../components/responsive'
+import sanityClient from '../../client'
 
 import { SingleCard } from './singleCard'
 import { SecondaryTitle } from '../../assets/styles'
-import { projectsInfo } from '../../assets/static'
 
 export function ProjectCards() {
     const [current, setCurrent] = useState(0)
+    const [projectData, setProjectData] = useState<any[]>([]);
+
+    useEffect(() => {
+        sanityClient.fetch(`*[_type == "project"]{
+            title,
+            date,
+            place,
+            description,
+            mainImage,
+            tech,
+            projectType,
+            projectLink,
+            projectGithub,
+            tags,
+        }`
+        )
+            .then(data => setProjectData(data))
+            .catch(console.error);
+    }, [])
 
     const isMobile = useMediaQuery({ maxWidth: SCREENS.sm })
 
-    console.log(projectsInfo)
+    console.log(projectData)
 
-    const numberOfDots = isMobile ? projectsInfo.length :  Math.ceil(projectsInfo.length / 3)
+    const numberOfDots = isMobile ? projectData.length : Math.ceil(projectData.length / 3)
 
     return (
         <CardContainer>
@@ -27,7 +46,7 @@ export function ProjectCards() {
             <Carousel
                 value={current}
                 onChange={setCurrent}
-                slides={projectsInfo}
+                slides={projectData}
                 plugins={['clickToChange', {
                     resolve: slidesToShowPlugin,
                     options: {
@@ -57,18 +76,17 @@ export function ProjectCards() {
                     }
                 }}
             >
-                {projectsInfo.map((n) => {
-                    return (
-                        <SingleCard
-                            key={n.id}
-                            img={n.img}
-                            title={n.title}
-                            tech={n.tech}
-                            link={n.link}
-                            git={n.git}
-                        />
-                    )
-                })}
+                {projectData && projectData.map((project: any, index: number) => (
+                    <SingleCard
+                        key={project.index}
+                        img={project.mainImage}
+                        title={project.title}
+                        tech={project.tech}
+                        link={project.projectLink}
+                        git={project.projectGithub}
+                    />
+                )
+                )}
             </Carousel>
             <Dots
                 value={current}

@@ -8,15 +8,15 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { Variables } from '../../assets/variables'
 import { Text } from '../../assets/styles'
 
-type card = {
-    title: string
-    link: string
-    git: string
-    img: string
-    tech: string
-}
+// type card = {
+//     title: string
+//     link: string
+//     git: string
+//     img: string
+//     tech: string
+// }
 
-export function SingleCard({title, link, git, img, tech}: card) {
+export function SingleCard({title, link, git, img, tech}: any) {
     return (
         <CardContainer>
             <CardThumbnail>
@@ -27,7 +27,7 @@ export function SingleCard({title, link, git, img, tech}: card) {
             </CardTitle>
             <TechText>{tech}</TechText>
             <Button>
-                <a href={link}><h1>open</h1></a>
+                <a href={link} target='_blank' rel="noreferrer"><h1>open</h1></a>
             </Button>
             <Icon>
                 <a href={git}><FontAwesomeIcon icon={faGithub} /></a>
@@ -41,10 +41,10 @@ const CardContainer = styled.div`
     min-height: 23em;
     max-height: 28em;
     box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
-              0 2px 2px rgba(0,0,0,0.12), 
-              0 4px 4px rgba(0,0,0,0.12), 
-              0 8px 8px rgba(0,0,0,0.12),
-              0 12px 12px rgba(0,0,0,0.12);
+                0 2px 2px rgba(0,0,0,0.12), 
+                0 4px 4px rgba(0,0,0,0.12), 
+                0 8px 8px rgba(0,0,0,0.12),
+                0 12px 12px rgba(0,0,0,0.12);
     ${tw`
         flex
         flex-col

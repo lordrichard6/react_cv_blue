@@ -7,15 +7,15 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { Variables } from '../../assets/variables'
 import { Text, Title } from '../../assets/styles'
 
-type project = {
-    title: string
-    link: string
-    git: string
-    img: string
-    text: string
-}
+// type project = {
+//     title: string
+//     link: string
+//     git: string
+//     img: string
+//     text: string
+// }
 
-export function LatestProject({title, link, git, img, text}: project) {
+export function LatestProject({title, link, git, img, text}: any) {
     return (
         <ComponentContainer>
             <Description>Latest</Description>

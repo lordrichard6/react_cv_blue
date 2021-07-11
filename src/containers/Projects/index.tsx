@@ -22,11 +22,11 @@ export function Projects() {
                 {/* <BgShape /> */}
                 <TopSection />
                 <LatestProject
-                    title={projectsInfo[9].title}
-                    link={projectsInfo[9].link}
-                    git={projectsInfo[9].git}
-                    img={projectsInfo[9].img}
-                    text={projectsInfo[9].text}
+                    title={projectsInfo[0].title}
+                    link={projectsInfo[0].link}
+                    git={projectsInfo[0].git}
+                    img={projectsInfo[0].img}
+                    text={projectsInfo[0].text}
                 />
                 <ProjectCards />
             {/* </PageContainer> */}
