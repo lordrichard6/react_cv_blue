@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 import ReactTypingEffect from 'react-typing-effect'
 
+import {BgAnimation} from '../../components/bgAnimation'
 import { Variables } from '../../assets/variables'
 import blob from '../../assets/images/blob.svg'
 import logo from '../../assets/images/logo_me-min.png'
@@ -16,6 +17,7 @@ export function TopSection() {
                     <ReactTypingEffect text='Designer' speed={140} eraseDelay={700} />
                     <ReactTypingEffect text='UI and UX Expert' speed={100} eraseDelay={700} />
                 </TypingContainer>
+                <BgAnimation />
                 {/* <Title>Developer{<br />} Designer{<br />} UI and UX Expert</Title> */}
                 <Slogan>Solutions don't come easy</Slogan>
             </LeftContainer>
@@ -61,6 +63,7 @@ const LeftContainer = styled.div`
         lg:p-0
         my-32
         lg:m-0
+        relative
     `}
 
 `

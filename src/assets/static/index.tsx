@@ -219,7 +219,7 @@ export const projectsInfo = [
         title: "FastRent",
         tech: 'React.js',
         link: "https://lordrichard-rentfast.netlify.app/",
-        text: "A beautifull car rental website made with React using typescript.",
+        text: "A beautifull car rental website made with React using typescript. Used styled-components together with tailwind to style the page.",
         git: "https://github.com/lordrichard6/rent-fast",
     }
 ]

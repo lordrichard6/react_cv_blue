@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 // import { Variables } from '../../assets/variables'
+import {BgAnimation} from '../../components/bgAnimation'
 import { Title, Text } from '../../assets/styles'
 import me from '../../assets/images/me.png'
 
@@ -23,6 +24,7 @@ export function TopSection() {
                 </Text>
             </LeftContainer>
             <RightContainer>
+                <BgAnimation />
                 <img src={me} alt="logo" />
             </RightContainer>
         </TopSectionContainer>
@@ -62,5 +64,6 @@ const RightContainer = styled.div`
         mt-10
         lg:mt-0
         lg:w-1/2
+        relative
     `}
 `
