@@ -44,16 +44,18 @@ const ComponentContainer = styled.div`
         w-11/12
         lg:w-4/5
         2xl:w-2/4
-        px-10
+        px-6
         py-2
         my-10
         bg-gray-300
         rounded-sm
+        relative
     `}
 
     img {
         ${tw`
             w-full
+            rounded-sm
         `}
     }
 `

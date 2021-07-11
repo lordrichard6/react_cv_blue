@@ -5,6 +5,7 @@ import tw from 'twin.macro'
 // import { Variables } from '../../assets/variables'
 import { Title, Text, TercearyTitle } from '../../assets/styles'
 import { ProgressBar } from '../../components/progressBar'
+import bg from '../../assets/images/icon.png'
 
 export function TopSection() {
     return (
@@ -24,6 +25,7 @@ export function TopSection() {
 
                     </Text>
                 </InnerSection>
+                <img src={bg} alt="logo" />
             </LeftSection>
             <RightSection>
                 <InnerSection>
@@ -61,6 +63,7 @@ const SectionContainer = styled.div`
         lg:flex-row
         self-center
         overflow-x-hidden
+        overflow-y-hidden
         my-12
         lg:my-20
         lg:mx-20
@@ -73,7 +76,18 @@ const LeftSection = styled.div`
         flex
         flex-col
         lg:w-1/2
+        relative
     `}
+    img {
+        z-index: -1;
+        ${tw`
+            flex
+            self-center
+            justify-self-center
+            opacity-10
+            absolute
+        `}
+    }
 `
 
 const RightSection = styled.div`
