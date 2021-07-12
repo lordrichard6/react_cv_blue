@@ -92,7 +92,7 @@ const FooterContainer = styled.div`
     ${tw`
         flex
         flex-col
-        w-full
+        w-screen
         pt-6
         px-4
         lg:px-20
