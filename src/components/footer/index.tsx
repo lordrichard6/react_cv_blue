@@ -43,14 +43,14 @@ export function Footer() {
                             <FontAwesomeIcon icon={faLinkedin} />
                         </Icon>
                         <Icon
-                            href="https://www.linkedin.com/in/pauloreizinho/"
+                            href="https://www.instagram.com/l0rdr1chard/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <FontAwesomeIcon icon={faInstagram} />
                         </Icon>
                         <Icon
-                            href="https://www.linkedin.com/in/pauloreizinho/"
+                            href="https://github.com/lordrichard6/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
