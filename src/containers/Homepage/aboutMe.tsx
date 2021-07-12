@@ -1,16 +1,29 @@
-import React from 'react'
+// import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import tw from "twin.macro"
+// import sanityClient from '../../client'
 
 import { Variables } from '../../assets/variables'
 import { Title, Text } from '../../assets/styles'
 
 export function AboutMe() {
+    // const [textData, setTextData] = useState<any[]>([]);
+
+    // useEffect(() => {
+    //     sanityClient.fetch(`*[_type == "aboutMe"]{
+    //         title,
+    //         text,
+    //     }`)
+    //         .then(data => setTextData(data))
+    //         .catch(console.error);
+    // }, [])
+
     return (
         <AboutMeContainer>
             <TextContainer>
                 <TitleMod>About me</TitleMod>
                 <Description>
+                    {/* {aboutMe.text} */}
                     My name is Paulo Reizinho, is was born in 1986 in a
                     small town in the middle of Portugal but
                     I'm currently living in Swiss land more precisely in Zurich.{<br />}{<br />}

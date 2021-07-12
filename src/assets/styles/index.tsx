@@ -40,7 +40,7 @@ export const TercearyTitle = styled.h1`
 export const Text = styled.p`
     color: ${Variables.primary};
     ${tw`
-        md:text-lg
+        md:text-xl
         tracking-wider
     `}
 `
