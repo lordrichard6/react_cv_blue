@@ -22,12 +22,12 @@ function App() {
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
           <Route exact path='/' component={Homepage} />
-          <Route exact path='/projects' component={Projects} />
-          <Route exact path='/skills' component={Skills} />
-          <Route exact path='/blog:slug' component={ComingSoon} />
-          <Route exact path='/blog' component={ComingSoon} />
-          <Route exact path='/extra' component={ComingSoon} />
-          <Route exact path='*' component={Page404} />
+          <Route path='/projects' component={Projects} />
+          <Route path='/skills' component={Skills} />
+          <Route path='/blog:slug' component={ComingSoon} />
+          <Route path='/blog' component={ComingSoon} />
+          <Route path='/extra' component={ComingSoon} />
+          <Route path='*' component={Page404} />
         </Switch>
       </AnimatePresence>
       <Footer />
