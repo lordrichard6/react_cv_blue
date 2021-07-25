@@ -27,7 +27,7 @@ function App() {
           <Route path='/blog:slug' component={ComingSoon} />
           <Route path='/blog' component={ComingSoon} />
           <Route path='/extra' component={ComingSoon} />
-          <Route path='*' component={Page404} />
+          <Route path='/*' component={Page404} />
         </Switch>
       </AnimatePresence>
       <Footer />
