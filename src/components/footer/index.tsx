@@ -135,10 +135,11 @@ const HeaderTitle = styled.h1`
 
 const LogoContainer = styled.div`
     ${tw`
-        w-full
         flex
         flex-row
+        flex-wrap
         justify-center
+        content-center
     `}
     img {
         ${tw`
@@ -182,6 +183,7 @@ const IconContainer = styled.div`
         justify-center
         w-full
         text-3xl
+        2xl:text-4xl
         pt-2
     `}
 `
@@ -200,7 +202,7 @@ const HorizontalContainer = styled.div`
         items-center
         my-2
         xl:ml-10
-        2xl:ml-40
+        2xl:ml-80
     `}
 `
 

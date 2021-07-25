@@ -44,7 +44,6 @@ export function AboutMe() {
                     Any more info please contact me, all my contacts are in the footer.
                 </Description>
             </TextContainer>
-
         </AboutMeContainer>
     )
 }
