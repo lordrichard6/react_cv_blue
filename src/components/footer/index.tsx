@@ -7,7 +7,8 @@ import { faEnvelope, faPhoneAlt, faDungeon } from '@fortawesome/free-solid-svg-i
 
 import logo from '../../assets/images/icon.png'
 import { Variables } from '../../assets/variables'
-import { FormComponent } from './form'
+// import { FormComponent } from './form'
+import { FormComponent } from './formJS'
 
 export function Footer() {
 

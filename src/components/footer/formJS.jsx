@@ -5,42 +5,40 @@ import tw from "twin.macro";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { API_KEY } from '../../assets/emailjsKey'
+import { API_KEY } from "../../assets/emailjsKey";
 
 export function FormComponent() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  // const [statusMessage, setStatusMessage] = useState("");
+  const [statusMessage, setStatusMessage] = useState("");
 
-  // const API_KEY = process.env.API_KEY;
+//   const API_KEY = process.env.API_KEY;
 
-  function sendEmail(e: any) {
+  function sendEmail(e) {
     e.preventDefault();
-    // const statusMessage = document.querySelector(".status-message");
+    const statusMessage = document.querySelector(".status-message");
 
-    emailjs
-      .sendForm("gmail", "template_if9z5ob", e.target, API_KEY)
-      .then(
-        (result: any) => {
-          console.log(result.text);
-          // setStatusMessage("Message sent sucessfully!");
-          // statusMessage.className =
-          //   "status-message text-green-500 text-opacity-0 self-center";
-          // setTimeout(() => {
-          //   statusMessage.className = "status-message text-opacity-100";
-          // }, 1000);
-        },
-        (error: any) => {
-          console.log(error.text);
-          // setStatusMessage("Failed to send message! Try again.");
-          // statusMessage.className =
-          //   "status message text-red-500 text-opacity-0 self-center";
-          // setTimeout(() => {
-          //   statusMessage.className = "status-message text-opacity-100";
-          // }, 1000);
-        }
-      );
+    emailjs.sendForm("gmail", "template_if9z5ob", e.target, API_KEY).then(
+      (result) => {
+        console.log(result.text);
+        setStatusMessage("Message sent sucessfully!");
+        statusMessage.className =
+          "status-message text-green-500 text-opacity-0 self-center";
+        setTimeout(() => {
+          statusMessage.className = "status-message text-opacity-100";
+        }, 1000);
+      },
+      (error) => {
+        console.log(error.text);
+        setStatusMessage("Failed to send message! Try again.");
+        statusMessage.className =
+          "status message text-red-500 text-opacity-0 self-center";
+        setTimeout(() => {
+          statusMessage.className = "status-message text-opacity-100";
+        }, 1000);
+      }
+    );
     setName("");
     setEmail("");
     setMessage("");
@@ -48,8 +46,9 @@ export function FormComponent() {
 
   return (
     <FormContainer>
-      {/* <EmailSend className="status-message">{statusMessage}</EmailSend> */}
-      <form onSubmit={sendEmail}>
+      <EmailSend className="status-message">{statusMessage}</EmailSend>
+      <form id="contact-form" onSubmit={sendEmail}>
+        {/* <form> */}
         <input
           type="text"
           name="name"
@@ -70,10 +69,10 @@ export function FormComponent() {
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Message"
         />
+        <SubmitButton type="submit">
+          <FontAwesomeIcon icon={faEnvelope} />
+        </SubmitButton>
       </form>
-      <SubmitButton type="submit">
-        <FontAwesomeIcon icon={faEnvelope} />
-      </SubmitButton>
     </FormContainer>
   );
 }
