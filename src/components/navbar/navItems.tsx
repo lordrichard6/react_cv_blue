@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
 import tw from 'twin.macro'
-import { slide as Menu } from 'react-burger-menu'
+import { stack as Menu } from 'react-burger-menu'
 import { useMediaQuery } from 'react-responsive'
 import { SCREENS } from '../responsive'
 import menuStyles from './menuStyles'
@@ -15,8 +15,11 @@ export function NavItems() {
 
     if (isMobile)
         return (
-            <Menu right
+            <Menu 
+                right
                 styles={menuStyles}
+                disableAutoFocus
+                
             >
                 <ListContainer>
                     <NavItem menu>
