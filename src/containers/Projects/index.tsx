@@ -50,7 +50,6 @@ const PageContainer = styled(motion.div)`
 `
 
 const ShapeDivider = styled.div`
-    content: '';
     aspect-ratio: 900/300;
     width: 100%;
     background-repeat: no-repeat;
