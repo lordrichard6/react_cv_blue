@@ -39,6 +39,7 @@ const PageContainer = styled.div`
 const TechTitle = styled(Title)`
     ${tw`
         self-center
+        text-white
     `}
 `
 
@@ -73,5 +74,6 @@ const Icon = styled.div`
 const TechName = styled(Text)`
     ${tw`
         text-center
+        text-white
     `}
 `

@@ -22,9 +22,8 @@ export function Projects() {
         >
             {/* <BgShape /> */}
             <TopSection />
-            <ShapeDivider>
-
-            </ShapeDivider>
+            <ShapeDivider/>
+            {/* </ShapeDivider> */}
             <ProjectsContainer>
                 <LatestProject
                     title={projectsInfo[0].title}
@@ -51,8 +50,8 @@ const PageContainer = styled(motion.div)`
 `
 
 const ShapeDivider = styled.div`
-    margin-top: -12rem;
-    aspect-ratio: 960/300;
+    content: '';
+    aspect-ratio: 900/300;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
