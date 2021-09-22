@@ -46,7 +46,7 @@ const TopSectionContainer = styled.div`
         lg:mt-10
         2xl:my-60
         lg:px-24
-        
+        relative
     `}
 `
 
@@ -64,6 +64,7 @@ const LeftContainer = styled.div`
         my-32
         lg:m-0
         relative
+        z-10
     `}
 
 `
@@ -99,15 +100,20 @@ const RightContainer = styled.div`
         h-auto
         w-full
         lg:w-1/2
-        relative
+        absolute
+        top-1/4
+        lg:relative
+        z-0
+        opacity-20
+        lg:opacity-100
     `}
 `
 
 const BlobContainer = styled.div`
-    position: absolute;
-    z-index: -1;
+    
     ${tw`
-        
+        absolute
+        z-0
     `}
 `
 
@@ -121,6 +127,7 @@ const LogoContainer = styled.div`
 
     img {
         ${tw`
+            z-10
             w-3/4
             h-full
         `}
