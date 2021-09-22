@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled, { css } from 'styled-components'
 import tw from 'twin.macro'
 import { stack as Menu } from 'react-burger-menu'
