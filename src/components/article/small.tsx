@@ -4,29 +4,25 @@ import tw from 'twin.macro'
 
 import { Text } from '../../assets/styles'
 import thumbnail from '../../assets/images/harrison-hargrave-D5Jp8ueUQGc-unsplash.jpg'
-import { Variables } from '../../assets/variables'
+// import { Variables } from '../../assets/variables'
 
 export function ArticleSnippet() {
     return (
         <ComponentContainer>
             <TextContainer>
                 <InnerContainer>
-                    <TextTitle>news</TextTitle>
+                    <TextTitle>TECH</TextTitle>
+                    <PostTitle>This is a blog post</PostTitle>
                     <TextDate>20 - JUN</TextDate>
                 </InnerContainer>
-                <TextDescription>
-                    An Agency for webdesign,
-                    online markting,
-                    campaining, social media,
-                    CMS and IT Infrastructure.
-                </TextDescription>
             </TextContainer>
-            <img src={thumbnail} alt="thumbnail" />
         </ComponentContainer>
     )
 }
 
 const ComponentContainer = styled.div`
+    background-image: url(${thumbnail});
+    
     ${tw`
         flex
         flex-row
@@ -35,13 +31,9 @@ const ComponentContainer = styled.div`
         bg-opacity-50
         p-8
         my-2
+        bg-cover
+        bg-bottom
     `}
-    img {
-        ${tw`
-            w-1/4
-            pr-4
-        `}
-    }
 `
 
 const TextContainer = styled.div`
@@ -63,10 +55,10 @@ const InnerContainer = styled.div`
 `
 
 const TextTitle = styled(Text)`
-    color: ${Variables.secondary};
     ${tw`
         uppercase
         font-bold
+        text-white
     `}
 `
 
@@ -77,9 +69,8 @@ const TextDate = styled(Text)`
     `}
 `
 
-const TextDescription = styled(Text)`
-    color: ${Variables.secondary};
+const PostTitle = styled(Text)`
     ${tw`
-        
+        text-white
     `}
 `

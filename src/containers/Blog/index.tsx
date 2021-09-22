@@ -2,17 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'twin.macro'
 
-import { MainArticle } from '../../components/article'
-import { ArticleSnippet } from '../../components/article/small'
-import { Title } from '../../assets/styles'
+import { Header } from './header'
+import {Posts} from './posts'
 
 export function Blog() {
     return (
         <PageContainer>
-            <Title>Blog</Title>
-            <MainArticle />
-            <ArticleSnippet />
-            <ArticleSnippet />
+            <Header />
+            <Posts />
         </PageContainer>
     )
 }
@@ -21,10 +18,9 @@ const PageContainer = styled.div`
     ${tw`
         flex
         flex-col
-        w-full
+        w-screen
         items-center
         overflow-x-hidden
-        my-20
         lg:px-20
     `}
 `

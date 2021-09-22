@@ -9,7 +9,7 @@ import { Footer } from './components/footer'
 import { Homepage } from './containers/Homepage'
 import { Projects } from './containers/Projects'
 import { Skills } from './containers/Skills'
-// import { Blog } from './containers/Blog'
+import { Blog } from './containers/Blog'
 import { Page404 } from './containers/404'
 import { ComingSoon } from './containers/comingSoon'
 
@@ -25,7 +25,7 @@ function App() {
           <Route path='/projects' component={Projects} />
           <Route path='/skills' component={Skills} />
           <Route path='/blog:slug' component={ComingSoon} />
-          <Route path='/blog' component={ComingSoon} />
+          <Route path='/blog' component={Blog} />
           <Route path='/extra' component={ComingSoon} />
           <Route path='/*' component={Page404} />
         </Switch>

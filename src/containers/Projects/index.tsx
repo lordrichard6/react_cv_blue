@@ -8,7 +8,9 @@ import { ProjectCards } from '../../components/projectCards'
 import { LatestProject } from '../../components/latestProject'
 import { projectsInfo } from '../../assets/static'
 import { pageTransition } from '../../assets/animations'
+import { Variables } from '../../assets/variables'
 // import {BgShape} from '../../components/bgShape'
+import svg from '../../assets/images/layered-waves-haikei.svg'
 
 export function Projects() {
     return (
@@ -18,9 +20,12 @@ export function Projects() {
             exit="out"
             variants={pageTransition}
         >
-            {/* <PageContainer> */}
-                {/* <BgShape /> */}
-                <TopSection />
+            {/* <BgShape /> */}
+            <TopSection />
+            <ShapeDivider>
+
+            </ShapeDivider>
+            <ProjectsContainer>
                 <LatestProject
                     title={projectsInfo[0].title}
                     link={projectsInfo[0].link}
@@ -29,7 +34,7 @@ export function Projects() {
                     text={projectsInfo[0].text}
                 />
                 <ProjectCards />
-            {/* </PageContainer> */}
+            </ProjectsContainer>
         </PageContainer>
     )
 }
@@ -38,9 +43,32 @@ const PageContainer = styled(motion.div)`
     ${tw`
         flex
         flex-col
-        w-full
+        w-screen
         h-full
         items-center
         overflow-x-hidden
     `}
 `
+
+const ShapeDivider = styled.div`
+    margin-top: -12rem;
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(${svg});
+    ${tw`
+        lg:mt--44
+    `}
+`
+
+const ProjectsContainer = styled.div`
+    background-color: ${Variables.primary};
+    ${tw`
+        flex
+        flex-col
+        items-center
+    `}
+`
+

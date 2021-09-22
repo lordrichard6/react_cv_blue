@@ -41,7 +41,7 @@ const TopSectionContainer = styled.div`
         justify-between
         px-4
         my-12
-        lg:my-24
+        lg:mt-24
         lg:px-24
         2xl:px-2
     `}
