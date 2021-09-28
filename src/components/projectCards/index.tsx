@@ -101,7 +101,6 @@ export function ProjectCards() {
 
 const CardContainer = styled.div`
     ${tw`
-        max-w-screen-lg
         w-full
         flex
         flex-col
@@ -119,6 +118,7 @@ const InnerContainer = styled.div`
         grid-flow-row
         grid-cols-1
         lg:grid-cols-3
+        2xl:grid-cols-4
         gap-4
     `}
 `

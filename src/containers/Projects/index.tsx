@@ -43,7 +43,7 @@ const PageContainer = styled(motion.div)`
         flex
         flex-col
         w-screen
-        h-full
+        h-full 
         items-center
         overflow-x-hidden
     `}
@@ -67,6 +67,7 @@ const ProjectsContainer = styled.div`
         flex
         flex-col
         items-center
+        w-full
     `}
 `
 

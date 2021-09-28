@@ -52,7 +52,7 @@ const AboutMeContainer = styled.div`
     background-color: ${Variables.primary}; 
     ${tw`
         w-screen
-        pb-24
+        py-24
         relative
         flex
         flex-wrap
@@ -78,5 +78,6 @@ const TitleMod= styled(Title)`
 const Description = styled(Text)`
     ${tw`
         text-white
+        2xl:text-2xl
     `}
 `

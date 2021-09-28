@@ -10,16 +10,14 @@ import { Link } from 'react-router-dom'
 import { Variables } from '../../assets/variables'
 
 export function NavItems() {
-
     const isMobile = useMediaQuery({ maxWidth: SCREENS.sm })
 
     if (isMobile)
         return (
-            <Menu 
+            <Menu
                 right
                 styles={menuStyles}
                 disableAutoFocus
-                
             >
                 <ListContainer>
                     <NavItem menu>

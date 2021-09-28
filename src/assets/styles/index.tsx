@@ -42,5 +42,7 @@ export const Text = styled.p`
     ${tw`
         md:text-xl
         tracking-wider
+        2xl:text-3xl
+        font-medium
     `}
 `
